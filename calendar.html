@@ -16,6 +16,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="css/calendar.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <title>Calendar with Events</title>
   </head>
   <body>
@@ -89,12 +90,18 @@
                 class="event-time-to"
               />
             </div>
+            <div class="file-input">
+              <input type="file">
+              <span class="button">Choose</span>
+              <span class="label" data-js-label>No file selected</label>
+            </div>
           </div>
           <div class="add-event-footer">
             <button class="add-event-btn">Add Event</button>
           </div>
         </div>
       </div>
+      <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
       <button class="add-event">
         <i class="fas fa-plus"></i>
       </button>
