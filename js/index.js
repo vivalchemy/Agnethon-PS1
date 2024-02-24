@@ -1,3 +1,5 @@
+import { checkWithFirebase } from "../firebase/signup.js";
+
 const submitButton = document.querySelector('.login div input[type="submit"]');
 
 function isValidEmail(email) {
@@ -12,7 +14,7 @@ function isValidPassword(password) {
   return passwordRegex.test(password);
 }
 
-submitButton.addEventListener("click", function (event) {
+submitButton.addEventListener("click", async function (event) {
   event.preventDefault();
   const email = document.getElementById("login__username").value;
   const password = document.getElementById("login__password").value;
@@ -20,10 +22,14 @@ submitButton.addEventListener("click", function (event) {
     console.log("Not a valid email or password");
     return;
   }
-  const validEmail = email;
-  const validPassword = password;
-
-  console.log("Email:", validEmail);
-  console.log("Password:", validPassword);
-  window.location.href = "faculty.html";
+  let type = await checkWithFirebase(email, password);
+  if (type === "student") {
+    console.log("Logged in as student");
+  } else if (type === "faculty") {
+    console.log("Logged in as faculty");
+  } else if (type === "principal") {
+    console.log("Logged in as principal");
+  } else {
+    console.log("Couldn't log in in it");
+  }
 });
