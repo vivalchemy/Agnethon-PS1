@@ -32,6 +32,7 @@ import {
 //     console.log("Logged in as student");
 //   } else if (type === "faculty") {
 //     console.log("Logged in as faculty");
+//     window.location.href("faculty.html");
 //   } else if (type === "principal") {
 //     console.log("Logged in as principal");
 //   } else {

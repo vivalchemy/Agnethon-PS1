@@ -10,7 +10,7 @@ function isValidEmail(email) {
 
 function isValidPassword(password) {
   // Regular expression pattern for verifying email format specific to frcrce.ac.in domain
-  const passwordRegex = /^[0-9]{4}$/;
+  const passwordRegex = /^{4,}$/;
   return passwordRegex.test(password);
 }
 
