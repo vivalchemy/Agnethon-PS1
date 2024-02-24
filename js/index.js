@@ -25,4 +25,5 @@ submitButton.addEventListener("click", function (event) {
 
   console.log("Email:", validEmail);
   console.log("Password:", validPassword);
+  window.location.href = "faculty.html";
 });

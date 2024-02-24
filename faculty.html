@@ -1,11 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faculty - Approval/Deny</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Title</title>
+  <link rel="stylesheet" href="css/faculty.css" />
+  <script src="js/faculty.js" defer></script>
 </head>
+
 <body>
-    
+<!-- events/calendar toggle-->
+  <div class="container">
+    <div class="buttoncontainer">
+      <div class="changeslide">
+        <button id="event-card">Events</button>
+        <button id="calendar">Calendar</button>
+      </div>
+    </div>
+ <!-- events  -->
+    <div class="events">
+      <template id="eventTemplate">
+        <div class="card">
+          <img src="" alt="" class="event image" />
+          <h2 class="event title"></h2>
+          <p class="event description"></p>
+          <p class="event timestamp"></p>
+        </div>
+      </template>
+    </div>
+  </div>
 </body>
+
 </html>

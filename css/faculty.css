@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --color-bg: #121212;
+  --color-bg-faded: #181717;
+  --color-bg-extra-faded: #201f1f;
+  --color-bg-bonkers-faded: #2a2a2a;
+  --color-fg: #817f7f;
+  --color-accent: #ea4c88;
+  --color-accent-darker: #c24f7b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttoncontainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.changeslide {
+  width: 21vw;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.changeslide>button {
+  width: 10vw;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid #817f7f;
+  color: #fff;
+  text-align: center;
+  font-size: 17px;
+  background-color: #2a2a2a;
+}
+
+.changeslide button:hover {
+  background-color: #201f1f;
+}
+
+.events {
+  width: 90vw;
+  max-height: 60vh;
+  overflow-y: scroll;
+  margin-top: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 30px;
+}
+
+.events .card {
+  width: 14vw;
+  height: 30vh;
+  background-color: #201f1f;
+  border: 2px solid #201f1f;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  color: #817f7f;
+  font-size: 14px;
+  gap: 20px;
+  position: relative;
+}
+
+.events .card button {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.4s ease-in;
+  transform: translateY(100%);
+  font-size: 14px;
+  color: #fefbbd;
+}
+
+.events .card button:hover {
+  transform: scale(1.1);
+}
+
+.card:hover button {
+  opacity: 1;
+  transform: translateY(10%);
+}
+
+.events .card .details {
+  top: 20px;
+  background-color: #2832c2;
+}
+
+.events .card .approve {
+  top: 70px;
+  background-color: #50c878;
+}
+
+.events .card .reject {
+  top: 120px;
+  background-color: #ff2e22;
+}
+
+.card:hover {
+  background-color: #332c2c;
+}
+
+.events .card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid #201f1f;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+
+.events .card h2 {
+  overflow-y: scroll;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.events:hover::-webkit-scrollbar-thumb {
+  background: #614141;
+}
