@@ -64,20 +64,19 @@
   flex-wrap: wrap;
   padding: 20px;
   gap: 30px;
+  border: 2px solid #201f1f;
+  border-radius: 10px;
 }
 
-.events .card {
+.events > .card {
   width: 14vw;
-  height: 30vh;
+  height: 40vh;
   background-color: #201f1f;
   border: 2px solid #201f1f;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
-  overflow: hidden;
+  flex-wrap: wrap;
+  overflow: hidden auto;
   cursor: pointer;
   color: #817f7f;
   font-size: 14px;
@@ -85,7 +84,7 @@
   position: relative;
 }
 
-.events .card button {
+.card button {
   position: absolute;
   width: 100px;
   height: 40px;
@@ -97,6 +96,19 @@
   transform: translateY(100%);
   font-size: 14px;
   color: #fefbbd;
+  left: 70px;
+}
+
+.card .description{
+  margin: 15px 30px;
+  width: 10vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card .timestamp{
+ text-align: center;
 }
 
 .events .card button:hover {
@@ -128,15 +140,14 @@
 }
 
 .events .card img {
-  width: 200px;
+  width: 14vw;
   height: 200px;
   object-fit: cover;
   border: 2px solid #201f1f;
-  border-radius: 30px;
   box-sizing: border-box;
 }
 
-.events .card h2 {
+.card  h2 {
   overflow-y: scroll;
   text-align: center;
 }
