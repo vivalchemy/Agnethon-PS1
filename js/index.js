@@ -10,7 +10,7 @@ function isValidEmail(email) {
 
 function isValidPassword(password) {
   // Regular expression pattern for verifying email format specific to frcrce.ac.in domain
-  const passwordRegex = /^{4,}$/;
+  const passwordRegex = /^.{4,}$/;
   return passwordRegex.test(password);
 }
 
@@ -27,9 +27,11 @@ submitButton.addEventListener("click", async function (event) {
     console.log("Logged in as student");
   } else if (type === "faculty") {
     console.log("Logged in as faculty");
+    window.location.href = "faculty.html";
   } else if (type === "principal") {
     console.log("Logged in as principal");
   } else {
     console.log("Couldn't log in in it");
   }
 });
+

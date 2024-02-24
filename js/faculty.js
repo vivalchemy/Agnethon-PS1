@@ -1,3 +1,5 @@
+import { getType } from "./index";
+
 const events = [
   {
     title: "Agnethon",
@@ -106,31 +108,28 @@ showEvents(events);
 //   window.location = "https://www.agnethon.tech/";
 // }
 
-let type = prompt("Enter the type:: ");
+let type = getType;
+console.log("Type is: ", type);
 
 if (type === "principal" || type === "faculty") {
-
-let details = document.querySelectorAll("button.details");
-for (var i = 0; i < details.length; i++) {
-  details[i].style.display = "block";
-}
-let approve = document.querySelectorAll("button.approve");
-for (var i = 0; i < approve.length; i++) {
-  approve[i].style.display = "block";
-}
-let reject = document.querySelectorAll("button.reject");
-for (var i = 0; i < reject.length; i++) {
-  reject[i].style.display = "block";
-}
-
-
-} else if(type === "student") {
-let details = document.querySelectorAll("button.details");
-for (var i = 0; i < details.length; i++) {
-  details[i].style.display = "block";
-  details[i].style.top = "50px";
-}
-}
-else{
-  alert("Invalid User Login"); 
+  let details = document.querySelectorAll("button.details");
+  for (var i = 0; i < details.length; i++) {
+    details[i].style.display = "block";
+  }
+  let approve = document.querySelectorAll("button.approve");
+  for (var i = 0; i < approve.length; i++) {
+    approve[i].style.display = "block";
+  }
+  let reject = document.querySelectorAll("button.reject");
+  for (var i = 0; i < reject.length; i++) {
+    reject[i].style.display = "block";
+  }
+} else if (type === "student") {
+  let details = document.querySelectorAll("button.details");
+  for (var i = 0; i < details.length; i++) {
+    details[i].style.display = "block";
+    details[i].style.top = "50px";
+  }
+} else {
+  alert("Invalid User Login");
 }
